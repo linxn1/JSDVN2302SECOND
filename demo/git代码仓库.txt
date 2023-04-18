@@ -1,1 +1,3 @@
-https://gitee.com/lxn1780284612/gitdemo.git
+自己的gitee代码仓库：https://gitee.com/lxn1780284612/gitdemo.git
+
+老师的gitee代码仓库：https://gitee.com/paida-spitting-star/JSDVN2302SE-TEACHER.git
