@@ -7,7 +7,7 @@ import java.io.File;
  */
 public class MKDirDemo {
     public static void main(String[] args) {
-        File dir = new File("./demo/h/l/l/o");
+        File dir = new File("./h/e/l/l/o");
         if (dir.exists()) {
             System.out.println("该目录已存在！");
         } else {

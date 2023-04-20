@@ -14,7 +14,7 @@ import java.io.File;
  * 4.2.如果当前遍历的是目录, 输出当前目录的路径+名称
  * 并以此目录作为根, 接着遍历该目录下的所有子目录和子文件, 输出该目录下的所有目录和文件名
  */
-public class DeleteDirDemo {
+public class ListDirDemo {
     public static void main(String[] args) {
         File dir = new File("./demo");
         //调用recursionDir，递归遍历上面的目录

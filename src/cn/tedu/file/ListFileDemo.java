@@ -17,9 +17,11 @@ public class ListFileDemo {
              * File[] subs = dir.listFiles();
              * 将当前调用的File表示的目录的一层子项，各自实例化为File，并储存到File数组之中
              */
-            System.out.println("是目录！");
             File[] subs = dir.listFiles();
-            System.out.println(Arrays.toString(subs));
+            System.out.println("demo目录下，有" + subs.length + "个子项！");
+            for (int i = 0; i < subs.length; i++) {
+                System.out.println(subs[i].getName());
+            }
         } else {
             System.out.println("是文件！！！");
         }
