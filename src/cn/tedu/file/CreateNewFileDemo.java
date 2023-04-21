@@ -23,5 +23,12 @@ public class CreateNewFileDemo {
             file.createNewFile();//创建新的文件
             System.out.println("该文件创建完毕！");
         }
+        /**
+         * 返回文件的长度
+         */
+        if (file.exists()) {
+            System.out.println("文件的长度是：" + file.length());
+            System.out.println("文件名是：" + file.getName());
+        }
     }
 }
