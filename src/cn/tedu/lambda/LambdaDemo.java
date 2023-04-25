@@ -41,7 +41,7 @@ public class LambdaDemo {
         FileFilter f5 = pathname -> pathname.getName().contains("o");
 
         File dir = new File(".");
-        File[] subs = dir.listFiles(file -> file.getName().contains("o"));
+        File[] subs = dir.listFiles(file -> file.getName().contains("o"));//利用lambda表达式获取包含"o"的把文件
         for (int i = 0; i < subs.length; i++) {
             System.out.println(subs[i].getName());
         }

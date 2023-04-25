@@ -18,7 +18,34 @@ public class DeleteDirsDemo {
     public static void main(String[] args) {
         File dir = new File("./h");
         //调用recursionDir，递归遍历上面的目录
-        recursionDeleteDir(dir);
+//        recursionDeleteDir(dir);
+        deleteFile(dir);
+    }
+
+    private static void deleteFile(File dir) {
+        if (dir.exists()) {
+            if (dir.isFile()) {
+                System.out.println(dir.getName() + "删除成功！！！");
+                dir.delete();
+                return;
+            } else {
+                File[] files = dir.listFiles();
+                for (int i = 0; i < files.length; i++) {
+                    if (files[i].isFile()) {
+                        System.out.println(files[i].getName() + "删除成功！！！");
+                        files[i].delete();
+                    } else {
+                        deleteFile(files[i]);
+                    }
+                }
+            }
+            System.out.println(dir.getName() + "删除成功！！！");
+            dir.delete();
+            return;
+        } else {
+            System.out.println("目录不存在，无法删除！！！");
+            return;
+        }
     }
 
     /**
