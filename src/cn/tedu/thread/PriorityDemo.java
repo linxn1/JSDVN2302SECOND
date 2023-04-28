@@ -1,0 +1,41 @@
+package cn.tedu.thread;
+
+/**
+ * 该案例学习线程的优先级
+ * 线程的优先级分为10级，分别对应整数1-10，其中1是最低优先级，10是最高优先级，所有线程如果不设置优先级，则默认优先级为5
+ */
+public class PriorityDemo {
+    public static void main(String[] args) {
+        ;
+        Thread min = new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10000; i++) {
+                    System.out.println("我是min");
+                }
+            }
+        };
+        Thread norm = new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10000; i++) {
+                    System.out.println("我是norm");
+                }
+            }
+        };
+        Thread max = new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10000; i++) {
+                    System.out.println("我是max");
+                }
+            }
+        };
+        min.setPriority(Thread.MIN_PRIORITY);//设置最低优先级
+        norm.setPriority(Thread.NORM_PRIORITY);//设置中度优先级（不设置也是5）
+        max.setPriority(Thread.MAX_PRIORITY);//设置最高优先级
+        min.start();
+        norm.start();
+        max.start();
+    }
+}

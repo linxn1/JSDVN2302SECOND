@@ -1,6 +1,5 @@
 package cn.tedu.io;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -8,7 +7,7 @@ import java.io.ObjectOutputStream;
 /**
  * 此案例学习对象的序列化流
  */
-public class OODemo {
+public class OOSDemo {
     public static void main(String[] args) throws IOException {
         String name = "张三";
         int age = 18;
